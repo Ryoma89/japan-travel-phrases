@@ -1,5 +1,88 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# japan-travel-phrases 開発ルール
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+## プロジェクト概要
+
+日本旅行中の外国人が、電車・駅で起きた具体的な問題を選び、解決に必要な日本語フレーズをすぐ確認・再生・駅員へ提示できるスマートフォン優先のサービスである。一般的な日本語教材ではなく、問題解決までの短さと迷いにくさを優先する。
+
+## 仕様の参照順
+
+実装前に、担当範囲に応じて次の文書を確認する。
+
+1. `docs/product-spec.md`: 目的、MVP範囲、成功条件
+2. `docs/screen-spec.md`: ルート、画面、操作、受け入れ条件
+3. `docs/content-spec.md`: 静的データ、文言、音声の規則
+4. `docs/implementation-plan.md`: 実装順序と各フェーズの完了条件
+
+文書間に矛盾がある場合は推測で実装せず、プロダクト範囲は `product-spec.md`、画面挙動は `screen-spec.md`、データ表現は `content-spec.md` を優先し、解消できない点を依頼者へ確認する。
+
+## 確定技術スタック
+
+- Next.js、React、TypeScript、App Router
+- Tailwind CSS
+- pnpm
+- TypeScriptによる静的データ管理
+- 事前生成したMP3音声
+- GitHub、Vercel
+- スマートフォン優先
+
+使用中の Next.js は学習済みの知識と異なる可能性がある。コードを書く前に、対象APIに対応する `node_modules/next/dist/docs/` のガイドと非推奨事項を確認する。
+
+## MVPの制約
+
+- 対象カテゴリは「電車・駅」のみとする。
+- 対象問題は仕様に定めた5件のみとする。
+- ルートは `/`、`/problems`、`/problems/[slug]` の3種類とする。
+- 1問題につき3〜5件のフレーズを持たせる。
+- 駅員向け表示は問題詳細内のモーダルとする。
+- トップページから必要なフレーズへ2〜3操作以内で到達可能にする。
+
+## 実装ルール
+
+- Server Componentsを基本とし、Client Componentsはモーダル、音声再生など操作やブラウザAPIが必要な最小範囲だけにする。
+- TypeScriptの型を厳密にし、`any` や根拠のない型アサーションを避ける。
+- 問題・フレーズは型付き静的データとして管理する。
+- パッケージ管理には `pnpm` だけを使用する。
+- 不要な依存パッケージを追加しない。追加が必要なら、標準APIや既存依存で代替できない理由を明確にする。
+- バックエンド、API、データベースを追加しない。
+- 仕様にない機能を勝手に追加しない。未確定事項を独断で確定しない。
+- 音声は `public/audio/train/` の事前生成MP3を参照し、利用時に生成しない。
+- 存在しないslugは Next.js の not-found 処理へ送る。
+- 変更は担当範囲に限定し、無関係なリファクタリングを行わない。
+
+## UIルール
+
+- 375px前後の画面幅を基準に設計し、タップ対象と本文を読みやすくする。
+- 日本語フレーズを各カードとモーダルで最も目立たせる。
+- アイコンだけの主要操作を作らず、ボタンには英語の文字ラベルを付ける。
+- 色だけで状態や意味を伝えない。
+- 旅行中でも迷わない単純な情報階層とし、不要な説明や選択肢を増やさない。
+- キーボード操作、フォーカス表示、適切な見出し・ボタン名、十分なコントラストを確保する。
+
+## 禁止事項
+
+- 認証、課金、CMS、AI会話、発音判定、ユーザー向けリアルタイムAI API呼び出し
+- Docker、AWS
+- 音声の実行時API生成
+- 仕様外のカテゴリ、問題、画面、設定機能
+- 特定のText-to-Speechサービスを確定事項として扱うこと
+- 品質確認を省略したまま完了とすること
+
+## 作業完了前の確認
+
+コードまたは設定を変更した場合は、リポジトリルートで次を実行する。
+
+```bash
+pnpm lint
+pnpm build
+```
+
+文書だけの変更では、リンク・見出し・用語・仕様間の整合性と `git diff --check` を確認する。文書変更だけを理由にパッケージのインストールやソース変更を行わない。
+
+## 作業完了時の報告形式
+
+次の順で簡潔に報告する。
+
+1. 実施内容と変更ファイル
+2. 仕様上の判断、未確定事項、残課題
+3. 実行した確認コマンドと結果（未実行なら理由）
+4. 次に行う最小の作業
