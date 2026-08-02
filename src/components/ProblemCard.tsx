@@ -1,0 +1,37 @@
+import Link from "next/link";
+import type { ProblemSummary } from "@/data/problems";
+
+type ProblemCardProps = {
+  problem: ProblemSummary;
+  number: number;
+};
+
+export function ProblemCard({ problem, number }: ProblemCardProps) {
+  return (
+    <Link
+      href={`/problems/${problem.slug}`}
+      className="group flex min-h-28 w-full items-center gap-4 rounded-2xl border border-border bg-surface p-5 text-left transition-colors hover:border-primary hover:bg-category-soft focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus sm:gap-5 sm:p-6"
+    >
+      <span
+        className="grid size-11 shrink-0 place-items-center rounded-xl border border-border bg-background text-sm font-bold text-primary"
+        aria-hidden="true"
+      >
+        {String(number).padStart(2, "0")}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-lg font-semibold leading-6 text-foreground sm:text-xl">
+          {problem.title}
+        </span>
+        <span className="mt-2 block text-base leading-6 text-muted-foreground">
+          {problem.shortDescription}
+        </span>
+      </span>
+      <span
+        className="shrink-0 text-xl font-semibold text-primary transition-transform group-hover:translate-x-0.5"
+        aria-hidden="true"
+      >
+        →
+      </span>
+    </Link>
+  );
+}
