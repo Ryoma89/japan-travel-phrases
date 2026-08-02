@@ -30,7 +30,7 @@ export default function Home() {
 
         <div className="pt-8 sm:pt-16">
           <Link
-            href="/problems"
+            href="/categories"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-primary px-6 text-lg font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-focus sm:min-h-16 sm:rounded-2xl sm:text-xl"
           >
             Find a phrase
