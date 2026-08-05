@@ -2,7 +2,7 @@
 
 ## 1. 管理方針
 
-問題とフレーズは、TypeScriptファイル内の型付き静的データとして管理する。MVPではAPI、データベース、CMSを使用しない。実際の5問題分のフレーズ本文は未確定であり、型と規則を先に定め、後から追加できる構造にする。
+問題とフレーズは、TypeScriptファイル内の型付き静的データとして管理する。MVPではAPI、データベース、CMSを使用しない。電車・駅の5問題には各3件のフレーズを追加する。日本語、ローマ字、英訳は2026-08-05にプロジェクトオーナーが確認済みである。音声はMP3追加時に別途確認する。
 
 場面選択用のカテゴリ概要もTypeScriptの静的データとして管理する。`train-station`、`airport`、`restaurant`、`hotel`、`shopping` の5件をすべて選択可能にする。
 
@@ -81,8 +81,7 @@ export type Problem = {
 - 小文字の英単語とハイフンだけを使う kebab-case とする。
 - 状況が短く理解でき、MVP内で重複しない値にする。
 - 公開後はURL互換性のため安易に変更しない。
-- 例として確定しているもの: `cannot-exit-gate`、`wrong-train`
-- 残り3問題のslugは未確定。
+- 電車・駅の5問題では `cannot-exit-gate`、`wrong-train`、`cannot-find-platform`、`insufficient-ic-balance`、`lost-item-on-train` を使用する。
 
 ### フレーズID
 
