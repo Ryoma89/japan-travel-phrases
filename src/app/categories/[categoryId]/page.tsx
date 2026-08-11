@@ -47,10 +47,10 @@ export default async function CategoryProblemsPage({
       <nav className="flex items-center justify-between" aria-label="Breadcrumb">
         <Link
           href="/categories"
-          className="inline-flex min-h-12 items-center gap-2 rounded-lg px-1 text-base font-bold text-foreground underline-offset-4 hover:text-primary hover:underline focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus"
+          className="group inline-flex min-h-12 items-center gap-2 rounded-lg px-1 text-base font-bold text-foreground hover:text-primary focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus"
         >
           <span aria-hidden="true">←</span>
-          Back to scenes
+          <span className="underline-offset-4 group-hover:underline group-focus-visible:underline">Back to scenes</span>
         </Link>
         <span
           className="grid size-10 place-items-center rounded-xl bg-primary text-base font-bold text-primary-foreground"

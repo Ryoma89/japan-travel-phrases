@@ -1,4 +1,5 @@
 import type { Phrase } from "@/data/train-problem-details";
+import { StaffPhraseModal } from "@/components/StaffPhraseModal";
 
 type PhraseCardProps = { phrase: Phrase; number: number };
 
@@ -17,9 +18,13 @@ export function PhraseCard({ phrase, number }: PhraseCardProps) {
       <p className="mt-2 text-base leading-7 text-muted-foreground">
         {phrase.english}
       </p>
-      <p className="mt-5 border-t border-border pt-4 text-sm font-semibold text-subtle">
-        Audio and staff view coming next
-      </p>
+      <div className="mt-5 flex border-t border-border pt-5">
+        <StaffPhraseModal
+          phraseId={phrase.id}
+          japanese={phrase.japanese}
+          english={phrase.english}
+        />
+      </div>
     </article>
   );
 }
