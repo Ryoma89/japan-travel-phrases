@@ -7,8 +7,6 @@ import { trainProblemDetails } from "@/data/train-problem-details";
 
 type ProblemDetailPageProps = { params: Promise<{ slug: string }> };
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return trainProblemDetails.map((problem) => ({ slug: problem.slug }));
 }
