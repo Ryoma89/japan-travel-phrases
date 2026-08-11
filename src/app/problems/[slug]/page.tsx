@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AllergenPhraseList } from "@/components/AllergenPhraseList";
 import { PageContainer } from "@/components/PageContainer";
 import { PhraseCard } from "@/components/PhraseCard";
 import { problemDetails } from "@/data/problem-details";
@@ -40,11 +41,15 @@ export default async function ProblemDetailPage({ params }: ProblemDetailPagePro
           <p className="mt-5 text-lg leading-8 text-muted-foreground">{problem.situation}</p>
         </header>
 
-        <ol className="mt-10 grid list-none gap-4 p-0 sm:mt-12">
-          {problem.phrases.map((phrase, index) => (
-            <li key={phrase.id}><PhraseCard phrase={phrase} number={index + 1} /></li>
-          ))}
-        </ol>
+        {problem.slug === "food-allergy" ? (
+          <AllergenPhraseList phrases={problem.phrases} />
+        ) : (
+          <ol className="mt-10 grid list-none gap-4 p-0 sm:mt-12">
+            {problem.phrases.map((phrase, index) => (
+              <li key={phrase.id}><PhraseCard phrase={phrase} number={index + 1} /></li>
+            ))}
+          </ol>
+        )}
       </main>
     </PageContainer>
   );

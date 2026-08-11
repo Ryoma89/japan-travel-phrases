@@ -1,9 +1,13 @@
 import type { Phrase } from "@/data/train-problem-details";
 import { StaffPhraseModal } from "@/components/StaffPhraseModal";
 
-type PhraseCardProps = { phrase: Phrase; number: number };
+type PhraseCardProps = {
+  phrase: Phrase;
+  number: number;
+  staffDisplayDisabled?: boolean;
+};
 
-export function PhraseCard({ phrase, number }: PhraseCardProps) {
+export function PhraseCard({ phrase, number, staffDisplayDisabled = false }: PhraseCardProps) {
   return (
     <article className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
       <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
@@ -23,6 +27,7 @@ export function PhraseCard({ phrase, number }: PhraseCardProps) {
           phraseId={phrase.id}
           japanese={phrase.japanese}
           english={phrase.english}
+          disabled={staffDisplayDisabled}
         />
       </div>
     </article>

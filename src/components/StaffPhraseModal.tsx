@@ -7,9 +7,10 @@ type StaffPhraseModalProps = {
   phraseId: string;
   japanese: string;
   english: string;
+  disabled?: boolean;
 };
 
-export function StaffPhraseModal({ phraseId, japanese, english }: StaffPhraseModalProps) {
+export function StaffPhraseModal({ phraseId, japanese, english, disabled = false }: StaffPhraseModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -52,10 +53,11 @@ export function StaffPhraseModal({ phraseId, japanese, english }: StaffPhraseMod
       <button
         ref={triggerRef}
         type="button"
+        disabled={disabled}
         onClick={() => setIsOpen(true)}
-        className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl bg-primary px-4 py-3 text-center text-base font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus"
+        className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl bg-primary px-4 py-3 text-center text-base font-bold text-primary-foreground transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus disabled:cursor-not-allowed disabled:bg-border disabled:text-muted-foreground"
       >
-        Show to staff
+        {disabled ? "Select an allergen first" : "Show to staff"}
       </button>
 
       {isOpen && createPortal(
