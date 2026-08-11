@@ -1,0 +1,804 @@
+{
+  "purpose": "Human review of all published phrase content",
+  "generatedOn": "2026-08-11",
+  "summary": {
+    "categoryCount": 5,
+    "problemCount": 25,
+    "phraseCount": 75
+  },
+  "reviewGuide": [
+    "Japanese is natural, polite, concise, and suitable for the situation.",
+    "Romaji matches the Japanese reading and follows a consistent style.",
+    "English accurately expresses the intent of the Japanese.",
+    "Show-to-staff wording is safe and clear when shown without extra context.",
+    "Food allergy and dietary restriction wording does not create a false guarantee of safety.",
+    "Replace 〇〇 / [allergen] with the traveler’s specific allergen before presenting an allergy phrase to staff."
+  ],
+  "categories": [
+    {
+      "id": "train-station",
+      "title": "Train & Station",
+      "reviewStatus": "feedback-applied-pending-confirmation-2026-08-11",
+      "problems": [
+        {
+          "slug": "cannot-exit-gate",
+          "title": "I can’t exit the ticket gate",
+          "shortDescription": "The ticket gate won’t let me through.",
+          "situation": "Use these phrases when your ticket or IC card does not let you leave the station.",
+          "phrases": [
+            {
+              "id": "cannot-exit-gate-01",
+              "japanese": "すみません、改札から出られません。",
+              "romaji": "Sumimasen, kaisatsu kara deraremasen.",
+              "english": "Excuse me, I can’t get out through the ticket gate."
+            },
+            {
+              "id": "cannot-exit-gate-02",
+              "japanese": "この切符で大丈夫ですか？",
+              "romaji": "Kono kippu de daijōbu desu ka?",
+              "english": "Is this ticket okay?"
+            },
+            {
+              "id": "cannot-exit-gate-03",
+              "japanese": "どうすればいいですか？",
+              "romaji": "Dō sureba ii desu ka?",
+              "english": "What should I do?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "すみません、改札から出られません。",
+            "english": "Excuse me, I can’t get out through the ticket gate."
+          }
+        },
+        {
+          "slug": "wrong-train",
+          "title": "I got on the wrong train",
+          "shortDescription": "Help me find the right route.",
+          "situation": "Use these phrases when you are on the wrong train or need a new route to your destination.",
+          "phrases": [
+            {
+              "id": "wrong-train-01",
+              "japanese": "すみません、電車を間違えました。",
+              "romaji": "Sumimasen, densha o machigaemashita.",
+              "english": "Excuse me, I got on the wrong train."
+            },
+            {
+              "id": "wrong-train-02",
+              "japanese": "この駅に行きたいです。",
+              "romaji": "Kono eki ni ikitai desu.",
+              "english": "I want to go to this station."
+            },
+            {
+              "id": "wrong-train-03",
+              "japanese": "どこで乗り換えればいいですか？",
+              "romaji": "Doko de norikaereba ii desu ka?",
+              "english": "Where should I change trains?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "すみません、電車を間違えました。",
+            "english": "Excuse me, I got on the wrong train."
+          }
+        },
+        {
+          "slug": "cannot-find-platform",
+          "title": "I can’t find the right platform",
+          "shortDescription": "Which platform should I use?",
+          "situation": "Use these phrases when you know your destination but do not know where to board.",
+          "phrases": [
+            {
+              "id": "cannot-find-platform-01",
+              "japanese": "ここへ行きたいのですが、何番線ですか？",
+              "romaji": "Koko e ikitai no desu ga, nanbansen desu ka?",
+              "english": "Which platform is the train to this station?"
+            },
+            {
+              "id": "cannot-find-platform-02",
+              "japanese": "このホームで合っていますか？",
+              "romaji": "Kono hōmu de atte imasu ka?",
+              "english": "Am I on the right platform?"
+            },
+            {
+              "id": "cannot-find-platform-03",
+              "japanese": "次の電車でいいですか？",
+              "romaji": "Tsugi no densha de ii desu ka?",
+              "english": "Should I take the next train?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "ここへ行きたいのですが、何番線ですか？",
+            "english": "Which platform is the train to this station?"
+          }
+        },
+        {
+          "slug": "insufficient-ic-balance",
+          "title": "My IC card balance is too low",
+          "shortDescription": "I need to add money or pay the fare.",
+          "situation": "Use these phrases when your IC card does not have enough balance for the fare.",
+          "phrases": [
+            {
+              "id": "insufficient-ic-balance-01",
+              "japanese": "ICカードの残高が足りません。",
+              "romaji": "IC kādo no zandaka ga tarimasen.",
+              "english": "My IC card balance is not enough."
+            },
+            {
+              "id": "insufficient-ic-balance-02",
+              "japanese": "どこでチャージできますか？",
+              "romaji": "Doko de chāji dekimasu ka?",
+              "english": "Where can I add money to it?"
+            },
+            {
+              "id": "insufficient-ic-balance-03",
+              "japanese": "不足分を現金で払えますか？",
+              "romaji": "Fusokubun o genkin de haraemasu ka?",
+              "english": "Can I pay the difference in cash?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "ICカードの残高が足りません。",
+            "english": "My IC card balance is not enough."
+          }
+        },
+        {
+          "slug": "lost-item-on-train",
+          "title": "I left something on the train",
+          "shortDescription": "Help me report a lost item.",
+          "situation": "Use these phrases when you need to report something left behind on a train.",
+          "phrases": [
+            {
+              "id": "lost-item-on-train-01",
+              "japanese": "電車に忘れ物をしました。",
+              "romaji": "Densha ni wasuremono o shimashita.",
+              "english": "I left something on the train."
+            },
+            {
+              "id": "lost-item-on-train-02",
+              "japanese": "この電車に乗っていました。",
+              "romaji": "Kono densha ni notte imashita.",
+              "english": "I was on this train."
+            },
+            {
+              "id": "lost-item-on-train-03",
+              "japanese": "どこに問い合わせればいいですか？",
+              "romaji": "Doko ni toiawasereba ii desu ka?",
+              "english": "Who should I contact?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "電車に忘れ物をしました。",
+            "english": "I left something on the train."
+          }
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "title": "Airport",
+      "reviewStatus": "feedback-applied-pending-confirmation-2026-08-11",
+      "problems": [
+        {
+          "slug": "cannot-find-check-in-counter",
+          "title": "I can’t find the check-in counter",
+          "shortDescription": "Where should I check in for my flight?",
+          "situation": "Use these phrases when you need to find the correct airline check-in counter.",
+          "phrases": [
+            {
+              "id": "cannot-find-check-in-counter-01",
+              "japanese": "チェックインカウンターはどこですか？",
+              "romaji": "Chekkuin kauntā wa doko desu ka?",
+              "english": "Where is the check-in counter?"
+            },
+            {
+              "id": "cannot-find-check-in-counter-02",
+              "japanese": "この航空会社のカウンターを探しています。",
+              "romaji": "Kono kōkū gaisha no kauntā o sagashite imasu.",
+              "english": "I’m looking for this airline’s counter."
+            },
+            {
+              "id": "cannot-find-check-in-counter-03",
+              "japanese": "この便はここでチェックインできますか？",
+              "romaji": "Kono bin wa koko de chekkuin dekimasu ka?",
+              "english": "Can I check in for this flight here?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "チェックインカウンターを探しています。",
+            "english": "I’m looking for the check-in counter."
+          }
+        },
+        {
+          "slug": "flight-delayed-or-canceled",
+          "title": "My flight is delayed or canceled",
+          "shortDescription": "I need to know what to do next.",
+          "situation": "Use these phrases when your flight status has changed and you need instructions.",
+          "phrases": [
+            {
+              "id": "flight-delayed-or-canceled-01",
+              "japanese": "この便は遅れていますか？",
+              "romaji": "Kono bin wa okurete imasu ka?",
+              "english": "Is this flight delayed?"
+            },
+            {
+              "id": "flight-delayed-or-canceled-02",
+              "japanese": "この便は欠航ですか？",
+              "romaji": "Kono bin wa kekkō desu ka?",
+              "english": "Is this flight canceled?"
+            },
+            {
+              "id": "flight-delayed-or-canceled-03",
+              "japanese": "次にどうすればいいですか？",
+              "romaji": "Tsugi ni dō sureba ii desu ka?",
+              "english": "What should I do next?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この便の状況を教えてください。",
+            "english": "Please tell me the status of this flight."
+          }
+        },
+        {
+          "slug": "missing-baggage",
+          "title": "My baggage is missing",
+          "shortDescription": "My bag did not arrive at baggage claim.",
+          "situation": "Use these phrases when your checked baggage has not arrived.",
+          "phrases": [
+            {
+              "id": "missing-baggage-01",
+              "japanese": "預けた荷物が出てきません。",
+              "romaji": "Azuketa nimotsu ga dete kimasen.",
+              "english": "My checked baggage has not arrived."
+            },
+            {
+              "id": "missing-baggage-02",
+              "japanese": "この便に乗っていました。",
+              "romaji": "Kono bin ni notte imashita.",
+              "english": "I was on this flight."
+            },
+            {
+              "id": "missing-baggage-03",
+              "japanese": "どこで手続きすればいいですか？",
+              "romaji": "Doko de tetsuzuki sureba ii desu ka?",
+              "english": "Where should I report it?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "預けた荷物が見つかりません。",
+            "english": "I can’t find my checked baggage."
+          }
+        },
+        {
+          "slug": "security-check-problem",
+          "title": "I have a problem at security",
+          "shortDescription": "I need help understanding the security check.",
+          "situation": "Use these phrases when you need help during the security check.",
+          "phrases": [
+            {
+              "id": "security-check-problem-01",
+              "japanese": "保安検査で止められました。",
+              "romaji": "Hoan kensa de tomeraremashita.",
+              "english": "I was stopped at the security check."
+            },
+            {
+              "id": "security-check-problem-02",
+              "japanese": "これは機内に持ち込めますか？",
+              "romaji": "Kore wa kinai ni mochikomemasu ka?",
+              "english": "Can I take this onto the plane?"
+            },
+            {
+              "id": "security-check-problem-03",
+              "japanese": "どうすればいいか教えてください。",
+              "romaji": "Dō sureba ii ka oshiete kudasai.",
+              "english": "Please tell me what I should do."
+            }
+          ],
+          "staffMessage": {
+            "japanese": "保安検査について教えてください。",
+            "english": "Please explain the security check to me."
+          }
+        },
+        {
+          "slug": "cannot-find-boarding-gate",
+          "title": "I can’t find my boarding gate",
+          "shortDescription": "Where should I go to board my flight?",
+          "situation": "Use these phrases when you need to locate the correct boarding gate.",
+          "phrases": [
+            {
+              "id": "cannot-find-boarding-gate-01",
+              "japanese": "この便の搭乗口はどこですか？",
+              "romaji": "Kono bin no tōjōguchi wa doko desu ka?",
+              "english": "Where is the boarding gate for this flight?"
+            },
+            {
+              "id": "cannot-find-boarding-gate-02",
+              "japanese": "この搭乗口で合っていますか？",
+              "romaji": "Kono tōjōguchi de atte imasu ka?",
+              "english": "Is this the correct boarding gate?"
+            },
+            {
+              "id": "cannot-find-boarding-gate-03",
+              "japanese": "搭乗はもう始まっていますか？",
+              "romaji": "Tōjō wa mō hajimatte imasu ka?",
+              "english": "Has boarding started already?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この便の搭乗口を探しています。",
+            "english": "I’m looking for the boarding gate for this flight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "title": "Restaurant",
+      "reviewStatus": "feedback-applied-pending-confirmation-2026-08-11",
+      "problems": [
+        {
+          "slug": "need-help-ordering",
+          "title": "I need help ordering",
+          "shortDescription": "I want to understand the menu and order.",
+          "situation": "Use these phrases when you need help reading the menu or placing an order.",
+          "phrases": [
+            {
+              "id": "need-help-ordering-01",
+              "japanese": "メニューを教えてもらえますか？",
+              "romaji": "Menyū o oshiete moraemasu ka?",
+              "english": "Could you explain the menu to me?"
+            },
+            {
+              "id": "need-help-ordering-02",
+              "japanese": "おすすめはどれですか？",
+              "romaji": "Osusume wa dore desu ka?",
+              "english": "Which one do you recommend?"
+            },
+            {
+              "id": "need-help-ordering-03",
+              "japanese": "これを一つお願いします。",
+              "romaji": "Kore o hitotsu onegai shimasu.",
+              "english": "One of these, please."
+            }
+          ],
+          "staffMessage": {
+            "japanese": "注文を手伝っていただけますか？",
+            "english": "Could you help me order?"
+          }
+        },
+        {
+          "slug": "food-allergy",
+          "title": "I have a food allergy",
+          "shortDescription": "I need to check what is in the food.",
+          "situation": "Use these phrases to tell staff about an allergy and ask about ingredients.",
+          "phrases": [
+            {
+              "id": "food-allergy-01",
+              "japanese": "〇〇アレルギーがあります。",
+              "romaji": "〇〇 arerugī ga arimasu.",
+              "english": "I am allergic to [allergen]."
+            },
+            {
+              "id": "food-allergy-02",
+              "japanese": "これに〇〇は入っていますか？",
+              "romaji": "Kore ni 〇〇 wa haitte imasu ka?",
+              "english": "Does this contain [allergen]?"
+            },
+            {
+              "id": "food-allergy-03",
+              "japanese": "少量の〇〇でも症状が出ます。材料を確認していただけますか？",
+              "romaji": "Shōryō no 〇〇 demo shōjō ga demasu. Zairyō o kakunin shite itadakemasu ka?",
+              "english": "Even a small amount of [allergen] can cause a reaction. Could you check the ingredients?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "〇〇アレルギーがあります。少量でも危険です。材料を確認していただけますか？",
+            "english": "I am allergic to [allergen]. Even a small amount is dangerous. Could you check the ingredients?"
+          }
+        },
+        {
+          "slug": "wrong-order",
+          "title": "My order is wrong",
+          "shortDescription": "This is not what I ordered.",
+          "situation": "Use these phrases when the food or drink served is different from your order.",
+          "phrases": [
+            {
+              "id": "wrong-order-01",
+              "japanese": "すみません、注文したものと違います。",
+              "romaji": "Sumimasen, chūmon shita mono to chigaimasu.",
+              "english": "Excuse me, this is different from what I ordered."
+            },
+            {
+              "id": "wrong-order-02",
+              "japanese": "これを注文しました。",
+              "romaji": "Kore o chūmon shimashita.",
+              "english": "I ordered this."
+            },
+            {
+              "id": "wrong-order-03",
+              "japanese": "確認してもらえますか？",
+              "romaji": "Kakunin shite moraemasu ka?",
+              "english": "Could you check, please?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "注文したものと違います。確認してください。",
+            "english": "This is not what I ordered. Please check."
+          }
+        },
+        {
+          "slug": "need-vegetarian-option",
+          "title": "I need a vegetarian option",
+          "shortDescription": "I want a meal without meat or fish.",
+          "situation": "Use these phrases to ask for a meal without meat, fish, or fish-based stock.",
+          "phrases": [
+            {
+              "id": "need-vegetarian-option-01",
+              "japanese": "私はベジタリアンです。",
+              "romaji": "Watashi wa bejitarian desu.",
+              "english": "I am vegetarian."
+            },
+            {
+              "id": "need-vegetarian-option-02",
+              "japanese": "肉と魚を使っていない料理はありますか？",
+              "romaji": "Niku to sakana o tsukatte inai ryōri wa arimasu ka?",
+              "english": "Do you have a dish without meat or fish?"
+            },
+            {
+              "id": "need-vegetarian-option-03",
+              "japanese": "この料理に魚のだしは入っていますか？",
+              "romaji": "Kono ryōri ni sakana no dashi wa haitte imasu ka?",
+              "english": "Does this dish contain fish stock?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "肉、魚、魚のだし、肉エキスを使っていない料理をお願いします。",
+            "english": "Please give me a dish without meat, fish, fish stock, or meat extract."
+          }
+        },
+        {
+          "slug": "pay-the-bill",
+          "title": "I want to pay the bill",
+          "shortDescription": "I need the check and payment options.",
+          "situation": "Use these phrases when you are ready to pay or need to ask about payment.",
+          "phrases": [
+            {
+              "id": "pay-the-bill-01",
+              "japanese": "お会計をお願いします。",
+              "romaji": "Okaikei o onegai shimasu.",
+              "english": "The bill, please."
+            },
+            {
+              "id": "pay-the-bill-02",
+              "japanese": "カードで払えますか？",
+              "romaji": "Kādo de haraemasu ka?",
+              "english": "Can I pay by card?"
+            },
+            {
+              "id": "pay-the-bill-03",
+              "japanese": "別々に払えますか？",
+              "romaji": "Betsubetsu ni haraemasu ka?",
+              "english": "Can we pay separately?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "お会計をお願いします。",
+            "english": "The bill, please."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "title": "Hotel",
+      "reviewStatus": "feedback-applied-pending-confirmation-2026-08-11",
+      "problems": [
+        {
+          "slug": "cannot-check-in",
+          "title": "I can’t check in",
+          "shortDescription": "There is a problem with my reservation.",
+          "situation": "Use these phrases when staff cannot find your reservation or check-in cannot be completed.",
+          "phrases": [
+            {
+              "id": "cannot-check-in-01",
+              "japanese": "チェックインをお願いします。",
+              "romaji": "Chekkuin o onegai shimasu.",
+              "english": "I’d like to check in, please."
+            },
+            {
+              "id": "cannot-check-in-02",
+              "japanese": "予約が見つからないようです。",
+              "romaji": "Yoyaku ga mitsukaranai yō desu.",
+              "english": "It seems my reservation cannot be found."
+            },
+            {
+              "id": "cannot-check-in-03",
+              "japanese": "予約確認書を見てもらえますか？",
+              "romaji": "Yoyaku kakuninsho o mite moraemasu ka?",
+              "english": "Could you look at my booking confirmation?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "予約がありますが、チェックインできません。",
+            "english": "I have a reservation, but I can’t check in."
+          }
+        },
+        {
+          "slug": "room-problem",
+          "title": "There’s a problem with my room",
+          "shortDescription": "Something in the room is not working.",
+          "situation": "Use these phrases when something in your hotel room needs attention.",
+          "phrases": [
+            {
+              "id": "room-problem-01",
+              "japanese": "部屋に問題があります。",
+              "romaji": "Heya ni mondai ga arimasu.",
+              "english": "There is a problem with my room."
+            },
+            {
+              "id": "room-problem-02",
+              "japanese": "エアコンが動きません。",
+              "romaji": "Eakon ga ugokimasen.",
+              "english": "The air conditioner is not working."
+            },
+            {
+              "id": "room-problem-03",
+              "japanese": "部屋を確認してもらえますか？",
+              "romaji": "Heya o kakunin shite moraemasu ka?",
+              "english": "Could you check the room?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "部屋に問題があります。確認してください。",
+            "english": "There is a problem with my room. Please check it."
+          }
+        },
+        {
+          "slug": "store-luggage",
+          "title": "I need to store my luggage",
+          "shortDescription": "Can the hotel keep my bags for a while?",
+          "situation": "Use these phrases when you want the hotel to hold your luggage.",
+          "phrases": [
+            {
+              "id": "store-luggage-01",
+              "japanese": "荷物を預かってもらえますか？",
+              "romaji": "Nimotsu o azukatte moraemasu ka?",
+              "english": "Could you store my luggage?"
+            },
+            {
+              "id": "store-luggage-02",
+              "japanese": "チェックインまで預けたいです。",
+              "romaji": "Chekkuin made azuketai desu.",
+              "english": "I’d like to leave it here until check-in."
+            },
+            {
+              "id": "store-luggage-03",
+              "japanese": "今日の夕方に取りに来ます。",
+              "romaji": "Kyō no yūgata ni tori ni kimasu.",
+              "english": "I’ll pick it up this evening."
+            }
+          ],
+          "staffMessage": {
+            "japanese": "荷物を預かっていただけますか？",
+            "english": "Could you store my luggage?"
+          }
+        },
+        {
+          "slug": "locked-out-of-room",
+          "title": "I’m locked out of my room",
+          "shortDescription": "My room key is not working.",
+          "situation": "Use these phrases when your room key does not open the door.",
+          "phrases": [
+            {
+              "id": "locked-out-of-room-01",
+              "japanese": "部屋の鍵が使えません。",
+              "romaji": "Heya no kagi ga tsukaemasen.",
+              "english": "My room key is not working."
+            },
+            {
+              "id": "locked-out-of-room-02",
+              "japanese": "部屋に入れません。",
+              "romaji": "Heya ni hairemasen.",
+              "english": "I can’t get into my room."
+            },
+            {
+              "id": "locked-out-of-room-03",
+              "japanese": "新しい鍵をもらえますか？",
+              "romaji": "Atarashii kagi o moraemasu ka?",
+              "english": "Could I get a new key?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "部屋の鍵が使えず、部屋に入れません。",
+            "english": "My room key does not work, and I can’t enter my room."
+          }
+        },
+        {
+          "slug": "checkout-help",
+          "title": "I need help with checkout",
+          "shortDescription": "I have a question about leaving or paying.",
+          "situation": "Use these phrases when checking out or asking about the final bill.",
+          "phrases": [
+            {
+              "id": "checkout-help-01",
+              "japanese": "チェックアウトをお願いします。",
+              "romaji": "Chekkuauto o onegai shimasu.",
+              "english": "I’d like to check out, please."
+            },
+            {
+              "id": "checkout-help-02",
+              "japanese": "追加料金について教えてください。",
+              "romaji": "Tsuika ryōkin ni tsuite oshiete kudasai.",
+              "english": "Please tell me about the additional charges."
+            },
+            {
+              "id": "checkout-help-03",
+              "japanese": "支払いはこれで終わりですか？",
+              "romaji": "Shiharai wa kore de owari desu ka?",
+              "english": "Is my payment complete?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "チェックアウトをお願いします。",
+            "english": "I’d like to check out, please."
+          }
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "title": "Shopping",
+      "reviewStatus": "feedback-applied-pending-confirmation-2026-08-11",
+      "problems": [
+        {
+          "slug": "cannot-find-item",
+          "title": "I can’t find an item",
+          "shortDescription": "I need help finding a product in the store.",
+          "situation": "Use these phrases when you need staff to help you locate a product.",
+          "phrases": [
+            {
+              "id": "cannot-find-item-01",
+              "japanese": "この商品を探しています。",
+              "romaji": "Kono shōhin o sagashite imasu.",
+              "english": "I’m looking for this item."
+            },
+            {
+              "id": "cannot-find-item-02",
+              "japanese": "これはどこにありますか？",
+              "romaji": "Kore wa doko ni arimasu ka?",
+              "english": "Where can I find this?"
+            },
+            {
+              "id": "cannot-find-item-03",
+              "japanese": "在庫はありますか？",
+              "romaji": "Zaiko wa arimasu ka?",
+              "english": "Do you have it in stock?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この商品を探しています。",
+            "english": "I’m looking for this item."
+          }
+        },
+        {
+          "slug": "different-size-or-color",
+          "title": "I need a different size or color",
+          "shortDescription": "Do you have another option available?",
+          "situation": "Use these phrases when you need another size or color of an item.",
+          "phrases": [
+            {
+              "id": "different-size-or-color-01",
+              "japanese": "別のサイズはありますか？",
+              "romaji": "Betsu no saizu wa arimasu ka?",
+              "english": "Do you have another size?"
+            },
+            {
+              "id": "different-size-or-color-02",
+              "japanese": "もっと大きいサイズはありますか？",
+              "romaji": "Motto ōkii saizu wa arimasu ka?",
+              "english": "Do you have a larger size?"
+            },
+            {
+              "id": "different-size-or-color-03",
+              "japanese": "別の色はありますか？",
+              "romaji": "Betsu no iro wa arimasu ka?",
+              "english": "Do you have another color?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この商品の別のサイズか色を探しています。",
+            "english": "I’m looking for another size or color of this item."
+          }
+        },
+        {
+          "slug": "check-price",
+          "title": "I want to know the price",
+          "shortDescription": "I can’t find or understand the price.",
+          "situation": "Use these phrases when you need to confirm an item’s price or discount.",
+          "phrases": [
+            {
+              "id": "check-price-01",
+              "japanese": "これはいくらですか？",
+              "romaji": "Kore wa ikura desu ka?",
+              "english": "How much is this?"
+            },
+            {
+              "id": "check-price-02",
+              "japanese": "表示価格は税込みですか？",
+              "romaji": "Hyōji kakaku wa zeikomi desu ka?",
+              "english": "Does the displayed price include tax?"
+            },
+            {
+              "id": "check-price-03",
+              "japanese": "これはセール品ですか？",
+              "romaji": "Kore wa sēruhin desu ka?",
+              "english": "Is this item on sale?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この商品の値段を教えてください。",
+            "english": "Please tell me the price of this item."
+          }
+        },
+        {
+          "slug": "tax-free-purchase",
+          "title": "I want to make a tax-free purchase",
+          "shortDescription": "I need help with the tax-free process.",
+          "situation": "Use these phrases when you want to ask about tax-free shopping.",
+          "phrases": [
+            {
+              "id": "tax-free-purchase-01",
+              "japanese": "免税で買えますか？",
+              "romaji": "Menzei de kaemasu ka?",
+              "english": "Can I buy this tax-free?"
+            },
+            {
+              "id": "tax-free-purchase-02",
+              "japanese": "免税手続きはどこでできますか？",
+              "romaji": "Menzei tetsuzuki wa doko de dekimasu ka?",
+              "english": "Where can I complete the tax-free procedure?"
+            },
+            {
+              "id": "tax-free-purchase-03",
+              "japanese": "パスポートが必要ですか？",
+              "romaji": "Pasupōto ga hitsuyō desu ka?",
+              "english": "Do I need my passport?"
+            }
+          ],
+          "staffMessage": {
+            "japanese": "免税手続きをしたいです。",
+            "english": "I would like to complete the tax-free procedure."
+          }
+        },
+        {
+          "slug": "return-or-exchange-item",
+          "title": "I need to return or exchange something",
+          "shortDescription": "There is a problem with something I bought.",
+          "situation": "Use these phrases when you want to ask about returning or exchanging an item.",
+          "phrases": [
+            {
+              "id": "return-or-exchange-item-01",
+              "japanese": "これを返品したいです。",
+              "romaji": "Kore o henpin shitai desu.",
+              "english": "I would like to return this."
+            },
+            {
+              "id": "return-or-exchange-item-02",
+              "japanese": "別の商品と交換できますか？",
+              "romaji": "Betsu no shōhin to kōkan dekimasu ka?",
+              "english": "Can I exchange it for another item?"
+            },
+            {
+              "id": "return-or-exchange-item-03",
+              "japanese": "レシートはこちらです。",
+              "romaji": "Reshīto wa kochira desu.",
+              "english": "Here is the receipt."
+            }
+          ],
+          "staffMessage": {
+            "japanese": "この商品を返品または交換したいです。",
+            "english": "I would like to return or exchange this item."
+          }
+        }
+      ]
+    }
+  ]
+}

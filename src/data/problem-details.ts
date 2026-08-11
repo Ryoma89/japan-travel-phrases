@@ -70,7 +70,7 @@ const additionalProblemDetails = [
       { id: "security-check-problem-02", japanese: "これは機内に持ち込めますか？", romaji: "Kore wa kinai ni mochikomemasu ka?", english: "Can I take this onto the plane?" },
       { id: "security-check-problem-03", japanese: "どうすればいいか教えてください。", romaji: "Dō sureba ii ka oshiete kudasai.", english: "Please tell me what I should do." },
     ],
-    staffMessage: { japanese: "保安検査について助けてください。", english: "Please help me with the security check." },
+    staffMessage: { japanese: "保安検査について教えてください。", english: "Please explain the security check to me." },
   },
   {
     categoryId: "airport",
@@ -94,11 +94,11 @@ const additionalProblemDetails = [
     shortDescription: "I want to understand the menu and order.",
     situation: "Use these phrases when you need help reading the menu or placing an order.",
     phrases: [
-      { id: "need-help-ordering-01", japanese: "注文を手伝ってもらえますか？", romaji: "Chūmon o tetsudatte moraemasu ka?", english: "Could you help me order?" },
+      { id: "need-help-ordering-01", japanese: "メニューを教えてもらえますか？", romaji: "Menyū o oshiete moraemasu ka?", english: "Could you explain the menu to me?" },
       { id: "need-help-ordering-02", japanese: "おすすめはどれですか？", romaji: "Osusume wa dore desu ka?", english: "Which one do you recommend?" },
       { id: "need-help-ordering-03", japanese: "これを一つお願いします。", romaji: "Kore o hitotsu onegai shimasu.", english: "One of these, please." },
     ],
-    staffMessage: { japanese: "注文を手伝ってください。", english: "Please help me order." },
+    staffMessage: { japanese: "注文を手伝っていただけますか？", english: "Could you help me order?" },
   },
   {
     categoryId: "restaurant",
@@ -108,11 +108,11 @@ const additionalProblemDetails = [
     shortDescription: "I need to check what is in the food.",
     situation: "Use these phrases to tell staff about an allergy and ask about ingredients.",
     phrases: [
-      { id: "food-allergy-01", japanese: "食物アレルギーがあります。", romaji: "Shokumotsu arerugī ga arimasu.", english: "I have a food allergy." },
-      { id: "food-allergy-02", japanese: "この料理の材料を教えてください。", romaji: "Kono ryōri no zairyō o oshiete kudasai.", english: "Please tell me the ingredients in this dish." },
-      { id: "food-allergy-03", japanese: "アレルギーがあるので、これは食べられますか？", romaji: "Arerugī ga aru node, kore wa taberaremasu ka?", english: "I have an allergy. Is this safe for me to eat?" },
+      { id: "food-allergy-01", japanese: "〇〇アレルギーがあります。", romaji: "〇〇 arerugī ga arimasu.", english: "I am allergic to [allergen]." },
+      { id: "food-allergy-02", japanese: "これに〇〇は入っていますか？", romaji: "Kore ni 〇〇 wa haitte imasu ka?", english: "Does this contain [allergen]?" },
+      { id: "food-allergy-03", japanese: "少量の〇〇でも症状が出ます。材料を確認していただけますか？", romaji: "Shōryō no 〇〇 demo shōjō ga demasu. Zairyō o kakunin shite itadakemasu ka?", english: "Even a small amount of [allergen] can cause a reaction. Could you check the ingredients?" },
     ],
-    staffMessage: { japanese: "食物アレルギーがあります。材料を確認してください。", english: "I have a food allergy. Please check the ingredients." },
+    staffMessage: { japanese: "〇〇アレルギーがあります。少量でも危険です。材料を確認していただけますか？", english: "I am allergic to [allergen]. Even a small amount is dangerous. Could you check the ingredients?" },
   },
   {
     categoryId: "restaurant",
@@ -123,7 +123,7 @@ const additionalProblemDetails = [
     situation: "Use these phrases when the food or drink served is different from your order.",
     phrases: [
       { id: "wrong-order-01", japanese: "すみません、注文したものと違います。", romaji: "Sumimasen, chūmon shita mono to chigaimasu.", english: "Excuse me, this is different from what I ordered." },
-      { id: "wrong-order-02", japanese: "私はこれを注文しました。", romaji: "Watashi wa kore o chūmon shimashita.", english: "I ordered this." },
+      { id: "wrong-order-02", japanese: "これを注文しました。", romaji: "Kore o chūmon shimashita.", english: "I ordered this." },
       { id: "wrong-order-03", japanese: "確認してもらえますか？", romaji: "Kakunin shite moraemasu ka?", english: "Could you check, please?" },
     ],
     staffMessage: { japanese: "注文したものと違います。確認してください。", english: "This is not what I ordered. Please check." },
@@ -140,7 +140,7 @@ const additionalProblemDetails = [
       { id: "need-vegetarian-option-02", japanese: "肉と魚を使っていない料理はありますか？", romaji: "Niku to sakana o tsukatte inai ryōri wa arimasu ka?", english: "Do you have a dish without meat or fish?" },
       { id: "need-vegetarian-option-03", japanese: "この料理に魚のだしは入っていますか？", romaji: "Kono ryōri ni sakana no dashi wa haitte imasu ka?", english: "Does this dish contain fish stock?" },
     ],
-    staffMessage: { japanese: "肉、魚、魚のだしを使っていない料理をお願いします。", english: "Please give me a dish without meat, fish, or fish stock." },
+    staffMessage: { japanese: "肉、魚、魚のだし、肉エキスを使っていない料理をお願いします。", english: "Please give me a dish without meat, fish, fish stock, or meat extract." },
   },
   {
     categoryId: "restaurant",
@@ -196,7 +196,7 @@ const additionalProblemDetails = [
       { id: "store-luggage-02", japanese: "チェックインまで預けたいです。", romaji: "Chekkuin made azuketai desu.", english: "I’d like to leave it here until check-in." },
       { id: "store-luggage-03", japanese: "今日の夕方に取りに来ます。", romaji: "Kyō no yūgata ni tori ni kimasu.", english: "I’ll pick it up this evening." },
     ],
-    staffMessage: { japanese: "荷物を一時的に預かってください。", english: "Please store my luggage for a while." },
+    staffMessage: { japanese: "荷物を預かっていただけますか？", english: "Could you store my luggage?" },
   },
   {
     categoryId: "hotel",
@@ -221,10 +221,10 @@ const additionalProblemDetails = [
     situation: "Use these phrases when checking out or asking about the final bill.",
     phrases: [
       { id: "checkout-help-01", japanese: "チェックアウトをお願いします。", romaji: "Chekkuauto o onegai shimasu.", english: "I’d like to check out, please." },
-      { id: "checkout-help-02", japanese: "追加料金について教えてください。", romaji: "Tsuika ryōkin ni tsuite oshiete kudasai.", english: "Please explain these additional charges." },
+      { id: "checkout-help-02", japanese: "追加料金について教えてください。", romaji: "Tsuika ryōkin ni tsuite oshiete kudasai.", english: "Please tell me about the additional charges." },
       { id: "checkout-help-03", japanese: "支払いはこれで終わりですか？", romaji: "Shiharai wa kore de owari desu ka?", english: "Is my payment complete?" },
     ],
-    staffMessage: { japanese: "チェックアウトについて手伝ってください。", english: "Please help me with checkout." },
+    staffMessage: { japanese: "チェックアウトをお願いします。", english: "I’d like to check out, please." },
   },
   {
     categoryId: "shopping",
@@ -264,7 +264,7 @@ const additionalProblemDetails = [
     phrases: [
       { id: "check-price-01", japanese: "これはいくらですか？", romaji: "Kore wa ikura desu ka?", english: "How much is this?" },
       { id: "check-price-02", japanese: "表示価格は税込みですか？", romaji: "Hyōji kakaku wa zeikomi desu ka?", english: "Does the displayed price include tax?" },
-      { id: "check-price-03", japanese: "これは割引されていますか？", romaji: "Kore wa waribiki sarete imasu ka?", english: "Is this item discounted?" },
+      { id: "check-price-03", japanese: "これはセール品ですか？", romaji: "Kore wa sēruhin desu ka?", english: "Is this item on sale?" },
     ],
     staffMessage: { japanese: "この商品の値段を教えてください。", english: "Please tell me the price of this item." },
   },
@@ -277,7 +277,7 @@ const additionalProblemDetails = [
     situation: "Use these phrases when you want to ask about tax-free shopping.",
     phrases: [
       { id: "tax-free-purchase-01", japanese: "免税で買えますか？", romaji: "Menzei de kaemasu ka?", english: "Can I buy this tax-free?" },
-      { id: "tax-free-purchase-02", japanese: "免税手続きはどこですか？", romaji: "Menzei tetsuzuki wa doko desu ka?", english: "Where can I complete the tax-free procedure?" },
+      { id: "tax-free-purchase-02", japanese: "免税手続きはどこでできますか？", romaji: "Menzei tetsuzuki wa doko de dekimasu ka?", english: "Where can I complete the tax-free procedure?" },
       { id: "tax-free-purchase-03", japanese: "パスポートが必要ですか？", romaji: "Pasupōto ga hitsuyō desu ka?", english: "Do I need my passport?" },
     ],
     staffMessage: { japanese: "免税手続きをしたいです。", english: "I would like to complete the tax-free procedure." },
