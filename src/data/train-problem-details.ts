@@ -3,7 +3,7 @@ export type Phrase = {
   japanese: string;
   romaji: string;
   english: string;
-  audioPath: string;
+  audioPath?: string;
 };
 
 export type Problem = {
@@ -26,11 +26,11 @@ export const trainProblemDetails = [
     shortDescription: "The ticket gate won’t let me through.",
     situation: "Use these phrases when your ticket or IC card does not let you leave the station.",
     phrases: [
-      { id: "cannot-exit-gate-01", japanese: "すみません、改札から出られません。", romaji: "Sumimasen, kaisatsu kara deraremasen.", english: "Excuse me, I can’t get through the ticket gate.", audioPath: "/audio/train/cannot-exit-gate-01.mp3" },
+      { id: "cannot-exit-gate-01", japanese: "すみません、改札から出られません。", romaji: "Sumimasen, kaisatsu kara deraremasen.", english: "Excuse me, I can’t get out through the ticket gate.", audioPath: "/audio/train/cannot-exit-gate-01.mp3" },
       { id: "cannot-exit-gate-02", japanese: "この切符で大丈夫ですか？", romaji: "Kono kippu de daijōbu desu ka?", english: "Is this ticket okay?", audioPath: "/audio/train/cannot-exit-gate-02.mp3" },
       { id: "cannot-exit-gate-03", japanese: "どうすればいいですか？", romaji: "Dō sureba ii desu ka?", english: "What should I do?", audioPath: "/audio/train/cannot-exit-gate-03.mp3" },
     ],
-    staffMessage: { japanese: "すみません、改札から出られません。", english: "Excuse me, I can’t get through the ticket gate." },
+    staffMessage: { japanese: "すみません、改札から出られません。", english: "Excuse me, I can’t get out through the ticket gate." },
   },
   {
     slug: "wrong-train",
@@ -50,11 +50,11 @@ export const trainProblemDetails = [
     shortDescription: "Which platform should I use?",
     situation: "Use these phrases when you know your destination but do not know where to board.",
     phrases: [
-      { id: "cannot-find-platform-01", japanese: "この駅へ行く電車は何番ホームですか？", romaji: "Kono eki e iku densha wa nanban hōmu desu ka?", english: "Which platform is the train to this station?", audioPath: "/audio/train/cannot-find-platform-01.mp3" },
+      { id: "cannot-find-platform-01", japanese: "ここへ行きたいのですが、何番線ですか？", romaji: "Koko e ikitai no desu ga, nanbansen desu ka?", english: "Which platform is the train to this station?", audioPath: "/audio/train/cannot-find-platform-01.mp3" },
       { id: "cannot-find-platform-02", japanese: "このホームで合っていますか？", romaji: "Kono hōmu de atte imasu ka?", english: "Am I on the right platform?", audioPath: "/audio/train/cannot-find-platform-02.mp3" },
       { id: "cannot-find-platform-03", japanese: "次の電車でいいですか？", romaji: "Tsugi no densha de ii desu ka?", english: "Should I take the next train?", audioPath: "/audio/train/cannot-find-platform-03.mp3" },
     ],
-    staffMessage: { japanese: "この駅へ行く電車は何番ホームですか？", english: "Which platform is the train to this station?" },
+    staffMessage: { japanese: "ここへ行きたいのですが、何番線ですか？", english: "Which platform is the train to this station?" },
   },
   {
     slug: "insufficient-ic-balance",
@@ -62,7 +62,7 @@ export const trainProblemDetails = [
     shortDescription: "I need to add money or pay the fare.",
     situation: "Use these phrases when your IC card does not have enough balance for the fare.",
     phrases: [
-      { id: "insufficient-ic-balance-01", japanese: "ICカードの残高が足りません。", romaji: "Ai shī kādo no zandaka ga tarimasen.", english: "My IC card balance is not enough.", audioPath: "/audio/train/insufficient-ic-balance-01.mp3" },
+      { id: "insufficient-ic-balance-01", japanese: "ICカードの残高が足りません。", romaji: "IC kādo no zandaka ga tarimasen.", english: "My IC card balance is not enough.", audioPath: "/audio/train/insufficient-ic-balance-01.mp3" },
       { id: "insufficient-ic-balance-02", japanese: "どこでチャージできますか？", romaji: "Doko de chāji dekimasu ka?", english: "Where can I add money to it?", audioPath: "/audio/train/insufficient-ic-balance-02.mp3" },
       { id: "insufficient-ic-balance-03", japanese: "不足分を現金で払えますか？", romaji: "Fusokubun o genkin de haraemasu ka?", english: "Can I pay the difference in cash?", audioPath: "/audio/train/insufficient-ic-balance-03.mp3" },
     ],
