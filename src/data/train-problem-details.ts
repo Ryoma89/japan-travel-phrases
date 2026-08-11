@@ -3,7 +3,7 @@ export type Phrase = {
   japanese: string;
   romaji: string;
   english: string;
-  audioPath: string;
+  audioPath?: string;
 };
 
 export type Problem = {

@@ -26,17 +26,6 @@ export function ProblemCard({ problem, number }: ProblemCardProps) {
     </>
   );
 
-  if (problem.status === "phrases-coming-soon") {
-    return (
-      <div className="flex min-h-28 w-full items-center gap-4 rounded-2xl border border-border bg-surface/60 p-5 text-left sm:gap-5 sm:p-6">
-        {content}
-        <span className="shrink-0 rounded-full bg-category-soft px-2.5 py-1 text-xs font-bold text-primary">
-          Phrases soon
-        </span>
-      </div>
-    );
-  }
-
   return (
     <Link
       href={`/problems/${problem.slug}`}
