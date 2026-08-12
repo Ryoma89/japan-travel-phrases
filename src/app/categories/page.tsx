@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CategoryCard } from "@/components/CategoryCard";
 import { PageContainer } from "@/components/PageContainer";
+import { ProblemSearch, type SearchableProblem } from "@/components/ProblemSearch";
 import { categories } from "@/data/categories";
+import { problemDetails } from "@/data/problem-details";
 
 export const metadata: Metadata = {
   title: "Choose a scene",
@@ -10,6 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function CategoriesPage() {
+  const searchableProblems = problemDetails.map((problem) => ({
+    slug: problem.slug,
+    title: problem.title,
+    shortDescription: problem.shortDescription,
+    situation: problem.situation,
+    categoryTitle: problem.categoryTitle,
+    englishPhrases: problem.phrases.map((phrase) => phrase.english),
+  })) satisfies readonly SearchableProblem[];
+
   return (
     <PageContainer>
       <nav className="flex items-center justify-between" aria-label="Breadcrumb">
@@ -41,13 +52,18 @@ export default function CategoriesPage() {
           </p>
         </header>
 
-        <ol className="mt-8 grid list-none gap-3 p-0 sm:mt-10 sm:gap-4">
-          {categories.map((category, index) => (
-            <li key={category.id}>
-              <CategoryCard category={category} number={index + 1} />
-            </li>
-          ))}
-        </ol>
+        <div>
+          <ProblemSearch problems={searchableProblems} />
+
+          <h2 className="mt-8 text-xl font-bold text-foreground">Browse by scene</h2>
+          <ol className="mt-4 grid list-none gap-3 p-0 sm:gap-4">
+            {categories.map((category, index) => (
+              <li key={category.id}>
+                <CategoryCard category={category} number={index + 1} />
+              </li>
+            ))}
+          </ol>
+        </div>
       </main>
     </PageContainer>
   );
