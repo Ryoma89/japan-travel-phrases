@@ -5,9 +5,10 @@ type PhraseCardProps = {
   phrase: Phrase;
   number: number;
   staffDisplayDisabled?: boolean;
+  hideRomaji?: boolean;
 };
 
-export function PhraseCard({ phrase, number, staffDisplayDisabled = false }: PhraseCardProps) {
+export function PhraseCard({ phrase, number, staffDisplayDisabled = false, hideRomaji = false }: PhraseCardProps) {
   return (
     <article className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
       <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
@@ -16,9 +17,11 @@ export function PhraseCard({ phrase, number, staffDisplayDisabled = false }: Phr
       <p lang="ja" className="mt-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl">
         {phrase.japanese}
       </p>
-      <p className="mt-4 text-base font-semibold leading-7 text-primary sm:text-lg">
-        {phrase.romaji}
-      </p>
+      {!hideRomaji && (
+        <p className="mt-4 text-base font-semibold leading-7 text-primary sm:text-lg">
+          {phrase.romaji}
+        </p>
+      )}
       <p className="mt-2 text-base leading-7 text-muted-foreground">
         {phrase.english}
       </p>

@@ -7,7 +7,7 @@ import type { Phrase } from "@/data/train-problem-details";
 const commonAllergens = [
   { id: "buckwheat", japanese: "そば", romaji: "soba", english: "buckwheat" },
   { id: "egg", japanese: "卵", romaji: "tamago", english: "eggs" },
-  { id: "milk", japanese: "乳", romaji: "nyū", english: "milk" },
+  { id: "milk", japanese: "乳製品", romaji: "nyūseihin", english: "dairy" },
   { id: "peanuts", japanese: "落花生", romaji: "rakkasei", english: "peanuts" },
   { id: "wheat", japanese: "小麦", romaji: "komugi", english: "wheat" },
   { id: "shrimp", japanese: "えび", romaji: "ebi", english: "shrimp" },
@@ -22,15 +22,19 @@ type AllergenPhraseListProps = {
 
 export function AllergenPhraseList({ phrases }: AllergenPhraseListProps) {
   const [selectedId, setSelectedId] = useState("");
-  const [customAllergen, setCustomAllergen] = useState("");
+  const [customJapanese, setCustomJapanese] = useState("");
+  const [customEnglish, setCustomEnglish] = useState("");
 
   const selectedAllergen = commonAllergens.find((allergen) => allergen.id === selectedId);
-  const trimmedCustomAllergen = customAllergen.trim();
-  const replacement = selectedAllergen ?? (selectedId === customAllergenId && trimmedCustomAllergen
+  const trimmedCustomJapanese = customJapanese.trim();
+  const trimmedCustomEnglish = customEnglish.trim();
+  const replacement = selectedAllergen ?? (selectedId === customAllergenId
+    && trimmedCustomJapanese
+    && trimmedCustomEnglish
     ? {
-        japanese: trimmedCustomAllergen,
-        romaji: trimmedCustomAllergen,
-        english: trimmedCustomAllergen,
+        japanese: trimmedCustomJapanese,
+        romaji: "〇〇",
+        english: trimmedCustomEnglish,
       }
     : null);
 
@@ -47,7 +51,7 @@ export function AllergenPhraseList({ phrases }: AllergenPhraseListProps) {
         <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Before using these phrases</p>
         <h2 id="allergen-heading" className="mt-3 text-2xl font-bold text-foreground">Choose your allergen</h2>
         <p className="mt-2 text-base leading-7 text-muted-foreground">
-          Select one allergen, or enter another name staff can understand.
+          Select one allergen, or enter its Japanese and English names.
         </p>
 
         <label htmlFor="allergen-select" className="mt-5 block text-base font-bold text-foreground">
@@ -69,21 +73,41 @@ export function AllergenPhraseList({ phrases }: AllergenPhraseListProps) {
         </select>
 
         {selectedId === customAllergenId && (
-          <div className="mt-4">
-            <label htmlFor="custom-allergen" className="block text-base font-bold text-foreground">
-              Other allergen
+          <fieldset className="mt-5 rounded-xl border border-border p-4">
+            <legend className="px-1 text-base font-bold text-foreground">Other allergen details</legend>
+            <p className="mt-1 text-sm leading-6 text-muted-foreground">
+              Complete both fields. The Japanese name is shown to staff, so check it before use.
+            </p>
+
+            <label htmlFor="custom-allergen-japanese" className="mt-4 block text-base font-bold text-foreground">
+              Japanese name
             </label>
             <input
-              id="custom-allergen"
+              id="custom-allergen-japanese"
               type="text"
-              value={customAllergen}
-              onChange={(event) => setCustomAllergen(event.target.value)}
-              placeholder="e.g. sesame"
+              lang="ja"
+              value={customJapanese}
+              onChange={(event) => setCustomJapanese(event.target.value)}
+              placeholder="e.g. ごま"
               maxLength={40}
               autoComplete="off"
               className="mt-2 min-h-12 w-full rounded-xl border-2 border-border bg-surface px-4 py-3 text-base text-foreground placeholder:text-subtle focus-visible:border-primary focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus"
             />
-          </div>
+
+            <label htmlFor="custom-allergen-english" className="mt-4 block text-base font-bold text-foreground">
+              English name
+            </label>
+            <input
+              id="custom-allergen-english"
+              type="text"
+              value={customEnglish}
+              onChange={(event) => setCustomEnglish(event.target.value)}
+              placeholder="e.g. sesame"
+              maxLength={80}
+              autoComplete="off"
+              className="mt-2 min-h-12 w-full rounded-xl border-2 border-border bg-surface px-4 py-3 text-base text-foreground placeholder:text-subtle focus-visible:border-primary focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-focus"
+            />
+          </fieldset>
         )}
 
         <p className="mt-5 rounded-xl bg-accent-soft px-4 py-3 text-sm font-semibold leading-6 text-warning-foreground">
@@ -94,7 +118,12 @@ export function AllergenPhraseList({ phrases }: AllergenPhraseListProps) {
       <ol className="mt-6 grid list-none gap-4 p-0">
         {personalizedPhrases.map((phrase, index) => (
           <li key={phrase.id}>
-            <PhraseCard phrase={phrase} number={index + 1} staffDisplayDisabled={!replacement} />
+            <PhraseCard
+              phrase={phrase}
+              number={index + 1}
+              staffDisplayDisabled={!replacement}
+              hideRomaji={selectedId === customAllergenId}
+            />
           </li>
         ))}
       </ol>

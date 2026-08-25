@@ -62,11 +62,11 @@ export const trainProblemDetails = [
     shortDescription: "I need to add money or pay the fare.",
     situation: "Use these phrases when your IC card does not have enough balance for the fare.",
     phrases: [
-      { id: "insufficient-ic-balance-01", japanese: "ICカードの残高が足りません。", romaji: "IC kādo no zandaka ga tarimasen.", english: "My IC card balance is not enough.", audioPath: "/audio/train/insufficient-ic-balance-01.mp3" },
+      { id: "insufficient-ic-balance-01", japanese: "ICカードの残高が足りません。", romaji: "Ai shī kādo no zandaka ga tarimasen.", english: "There isn’t enough balance on my IC card.", audioPath: "/audio/train/insufficient-ic-balance-01.mp3" },
       { id: "insufficient-ic-balance-02", japanese: "どこでチャージできますか？", romaji: "Doko de chāji dekimasu ka?", english: "Where can I add money to it?", audioPath: "/audio/train/insufficient-ic-balance-02.mp3" },
       { id: "insufficient-ic-balance-03", japanese: "不足分を現金で払えますか？", romaji: "Fusokubun o genkin de haraemasu ka?", english: "Can I pay the difference in cash?", audioPath: "/audio/train/insufficient-ic-balance-03.mp3" },
     ],
-    staffMessage: { japanese: "ICカードの残高が足りません。", english: "My IC card balance is not enough." },
+    staffMessage: { japanese: "ICカードの残高が足りません。", english: "There isn’t enough balance on my IC card." },
   },
   {
     slug: "lost-item-on-train",
@@ -76,7 +76,7 @@ export const trainProblemDetails = [
     phrases: [
       { id: "lost-item-on-train-01", japanese: "電車に忘れ物をしました。", romaji: "Densha ni wasuremono o shimashita.", english: "I left something on the train.", audioPath: "/audio/train/lost-item-on-train-01.mp3" },
       { id: "lost-item-on-train-02", japanese: "この電車に乗っていました。", romaji: "Kono densha ni notte imashita.", english: "I was on this train.", audioPath: "/audio/train/lost-item-on-train-02.mp3" },
-      { id: "lost-item-on-train-03", japanese: "どこに問い合わせればいいですか？", romaji: "Doko ni toiawasereba ii desu ka?", english: "Who should I contact?", audioPath: "/audio/train/lost-item-on-train-03.mp3" },
+      { id: "lost-item-on-train-03", japanese: "どこに問い合わせればいいですか？", romaji: "Doko ni toiawasereba ii desu ka?", english: "Where should I ask about it?", audioPath: "/audio/train/lost-item-on-train-03.mp3" },
     ],
     staffMessage: { japanese: "電車に忘れ物をしました。", english: "I left something on the train." },
   },
