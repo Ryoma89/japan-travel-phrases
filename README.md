@@ -104,7 +104,7 @@ bun ci
 - Tailwind CSS
 - Bun
 - TypeScriptによる静的データ
-- 事前生成したMP3音声
+- 事前生成したMP3音声（MVP後の候補）
 - GitHub、Vercel
 
 ## 仕様書
