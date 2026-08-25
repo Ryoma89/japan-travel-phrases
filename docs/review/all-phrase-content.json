@@ -1,6 +1,6 @@
 {
   "purpose": "Human review of all published phrase content, with AI-assisted editorial review",
-  "generatedOn": "2026-08-25",
+  "generatedOn": "2026-08-26",
   "summary": {
     "categoryCount": 5,
     "problemCount": 25,
@@ -18,7 +18,7 @@
     {
       "id": "train-station",
       "title": "Train & Station",
-      "reviewStatus": "ai-review-corrections-applied-pending-owner-approval-2026-08-25",
+      "reviewStatus": "owner-approved-2026-08-26",
       "problems": [
         {
           "slug": "cannot-exit-gate",
@@ -175,7 +175,7 @@
     {
       "id": "airport",
       "title": "Airport",
-      "reviewStatus": "ai-review-corrections-applied-pending-owner-approval-2026-08-25",
+      "reviewStatus": "owner-approved-2026-08-26",
       "problems": [
         {
           "slug": "cannot-find-check-in-counter",
@@ -332,7 +332,7 @@
     {
       "id": "restaurant",
       "title": "Restaurant",
-      "reviewStatus": "ai-review-corrections-applied-pending-owner-approval-2026-08-25",
+      "reviewStatus": "owner-approved-2026-08-26",
       "problems": [
         {
           "slug": "need-help-ordering",
@@ -489,7 +489,7 @@
     {
       "id": "hotel",
       "title": "Hotel",
-      "reviewStatus": "ai-review-corrections-applied-pending-owner-approval-2026-08-25",
+      "reviewStatus": "owner-approved-2026-08-26",
       "problems": [
         {
           "slug": "cannot-check-in",
@@ -646,7 +646,7 @@
     {
       "id": "shopping",
       "title": "Shopping",
-      "reviewStatus": "ai-review-corrections-applied-pending-owner-approval-2026-08-25",
+      "reviewStatus": "owner-approved-2026-08-26",
       "problems": [
         {
           "slug": "cannot-find-item",
