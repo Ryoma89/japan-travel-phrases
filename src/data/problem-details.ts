@@ -54,7 +54,7 @@ const additionalProblemDetails = [
     phrases: [
       { id: "missing-baggage-01", japanese: "預けた荷物が出てきません。", romaji: "Azuketa nimotsu ga dete kimasen.", english: "My checked baggage has not arrived." },
       { id: "missing-baggage-02", japanese: "この便に乗っていました。", romaji: "Kono bin ni notte imashita.", english: "I was on this flight." },
-      { id: "missing-baggage-03", japanese: "どこで手続きすればいいですか？", romaji: "Doko de tetsuzuki sureba ii desu ka?", english: "Where should I report it?" },
+      { id: "missing-baggage-03", japanese: "どこで手続きすればいいですか？", romaji: "Doko de tetsuzuki sureba ii desu ka?", english: "Where should I file a missing-baggage report?" },
     ],
     staffMessage: { japanese: "預けた荷物が見つかりません。", english: "I can’t find my checked baggage." },
   },
@@ -94,7 +94,7 @@ const additionalProblemDetails = [
     shortDescription: "I want to understand the menu and order.",
     situation: "Use these phrases when you need help reading the menu or placing an order.",
     phrases: [
-      { id: "need-help-ordering-01", japanese: "メニューを教えてもらえますか？", romaji: "Menyū o oshiete moraemasu ka?", english: "Could you explain the menu to me?" },
+      { id: "need-help-ordering-01", japanese: "メニューについて説明してもらえますか？", romaji: "Menyū ni tsuite setsumei shite moraemasu ka?", english: "Could you explain the menu to me?" },
       { id: "need-help-ordering-02", japanese: "おすすめはどれですか？", romaji: "Osusume wa dore desu ka?", english: "Which one do you recommend?" },
       { id: "need-help-ordering-03", japanese: "これを一つお願いします。", romaji: "Kore o hitotsu onegai shimasu.", english: "One of these, please." },
     ],
@@ -110,9 +110,9 @@ const additionalProblemDetails = [
     phrases: [
       { id: "food-allergy-01", japanese: "〇〇アレルギーがあります。", romaji: "〇〇 arerugī ga arimasu.", english: "I am allergic to [allergen]." },
       { id: "food-allergy-02", japanese: "これに〇〇は入っていますか？", romaji: "Kore ni 〇〇 wa haitte imasu ka?", english: "Does this contain [allergen]?" },
-      { id: "food-allergy-03", japanese: "少量の〇〇でも症状が出ます。材料を確認していただけますか？", romaji: "Shōryō no 〇〇 demo shōjō ga demasu. Zairyō o kakunin shite itadakemasu ka?", english: "Even a small amount of [allergen] can cause a reaction. Could you check the ingredients?" },
+      { id: "food-allergy-03", japanese: "〇〇が含まれていると症状が出る可能性があります。材料を確認していただけますか？", romaji: "〇〇 ga fukumarete iru to shōjō ga deru kanōsei ga arimasu. Zairyō o kakunin shite itadakemasu ka?", english: "I may have a reaction if this contains [allergen]. Could you check the ingredients?" },
     ],
-    staffMessage: { japanese: "〇〇アレルギーがあります。少量でも危険です。材料を確認していただけますか？", english: "I am allergic to [allergen]. Even a small amount is dangerous. Could you check the ingredients?" },
+    staffMessage: { japanese: "〇〇アレルギーがあります。材料を確認していただけますか？", english: "I am allergic to [allergen]. Could you check the ingredients?" },
   },
   {
     categoryId: "restaurant",
@@ -222,7 +222,7 @@ const additionalProblemDetails = [
     phrases: [
       { id: "checkout-help-01", japanese: "チェックアウトをお願いします。", romaji: "Chekkuauto o onegai shimasu.", english: "I’d like to check out, please." },
       { id: "checkout-help-02", japanese: "追加料金について教えてください。", romaji: "Tsuika ryōkin ni tsuite oshiete kudasai.", english: "Please tell me about the additional charges." },
-      { id: "checkout-help-03", japanese: "支払いはこれで終わりですか？", romaji: "Shiharai wa kore de owari desu ka?", english: "Is my payment complete?" },
+      { id: "checkout-help-03", japanese: "支払いはこれで終わりですか？", romaji: "Shiharai wa kore de owari desu ka?", english: "Is that everything I need to pay?" },
     ],
     staffMessage: { japanese: "チェックアウトをお願いします。", english: "I’d like to check out, please." },
   },
@@ -277,10 +277,10 @@ const additionalProblemDetails = [
     situation: "Use these phrases when you want to ask about tax-free shopping.",
     phrases: [
       { id: "tax-free-purchase-01", japanese: "免税で買えますか？", romaji: "Menzei de kaemasu ka?", english: "Can I buy this tax-free?" },
-      { id: "tax-free-purchase-02", japanese: "免税手続きはどこでできますか？", romaji: "Menzei tetsuzuki wa doko de dekimasu ka?", english: "Where can I complete the tax-free procedure?" },
+      { id: "tax-free-purchase-02", japanese: "免税手続きはどこでできますか？", romaji: "Menzei tetsuzuki wa doko de dekimasu ka?", english: "Where can I complete the tax-free process?" },
       { id: "tax-free-purchase-03", japanese: "パスポートが必要ですか？", romaji: "Pasupōto ga hitsuyō desu ka?", english: "Do I need my passport?" },
     ],
-    staffMessage: { japanese: "免税手続きをしたいです。", english: "I would like to complete the tax-free procedure." },
+    staffMessage: { japanese: "免税手続きをしたいです。", english: "I’d like to complete the tax-free process." },
   },
   {
     categoryId: "shopping",
